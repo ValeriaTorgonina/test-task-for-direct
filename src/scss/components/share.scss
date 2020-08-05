@@ -1,0 +1,48 @@
+.share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        width: 30px;
+        height: 30px;
+        background: #aeaeae;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.7;
+        }
+        
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: white;
+    }
+
+    @include media-breakpoint-down(md) { 
+        &__item {
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) { 
+        &__item {
+            width: 23px;
+            height: 23px;
+        }
+    }
+}

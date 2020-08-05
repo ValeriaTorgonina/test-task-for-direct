@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:locale" content="ru_RU"/>
-    <meta property="og:type" content="article"/>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Valeria Torgonina</title>
+    <title>test task</title>
 </head>
 <body>
     <div class="wrapper">
@@ -16,28 +14,28 @@
         <header class="main-header">
             <div class="container">
                 <a href="#" class="main-header__logo">
-                    <img src="#" alt="лого" class="main-header__logo-img">
+                    <img src="./assets/img/logo.png" alt="лого" class="main-header__logo-img">
                     <span class="main-header__logo-text">ваше лого</span>
                 </a>
                 <ul class="socials">
                     <li class="socials__item">
-                        <a href="https://vk.com/id119954262" class="socials__link" target="_blank">
+                        <a href="#" class="socials__link" target="_blank" title="facebook">
                             <svg class="socials__icon">
-                                <use xlink:href="assets/img/sprite.svg#inst"></use>
+                                <use xlink:href="#fb"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="socials__item">
-                        <a href="https://www.facebook.com/profile.php?id=100006446042762" class="socials__link" target="_blank">
+                        <a href="#" class="socials__link" target="_blank" title="instagram">
                             <svg class="socials__icon">
-                                <use xlink:href="assets/img/sprite.svg#fb"></use>
+                                <use xlink:href="#inst"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="socials__item">
-                        <a href="https://www.instagram.com/silent_rustle/?hl=ru" class="socials__link" target="_blank">
+                        <a href="#" class="socials__link" target="_blank" title="вконтакте">
                             <svg class="socials__icon">
-                                <use xlink:href="assets/img/sprite.svg#vk"></use>
+                                <use xlink:href="#vk"></use>
                             </svg>
                         </a>
                     </li>
@@ -47,31 +45,38 @@
 
         <main class="main">
             <article class="banner">
-                <img src="" alt="новогодние скидки">
-                <div class="banner__decor"></div>
+                <picture>
+                    <source srcset="./assets/img/banner-mobil-xs.jpg" media="(max-width: 400px)">
+                    <source srcset="./assets/img/banner-mobil.jpg" media="(max-width: 576px)">
+                    <source srcset="./assets/img/banner.jpg">
+                    <img class="banner__img" src="./assets/img/banner.jpg" alt="новогодние скидки">
+                </picture>
+                <div class="banner__decor">
+                    <img class="banner__decor-img" src="./assets/img/banner-decor.png" alt="лови момент">
+                </div>
             </article>
-            <div class="main-title">
-                <h2>Акция продлится до <b>14</b> января!</h2>
-            </div>
             <div class="container">
-                <div class="card-wrapper">
-                    <section class="card">
-                        <header class="card__header">
-                            <img src="" alt="product" class="card__img">
-                            <div class="card__price">
-                                <h4 class="card__price-title card__price-title--old">8300 ₽</h4>
-                                <h4 class="card__price-title">2490 ₽</h4>
+                <div class="promotion">
+                    <h2 class="promotion__title">Акция продлится до <b>14</b> января!</h2>
+                </div>
+                <div class="main__cards-wrapper">
+                    <section class="product-card">
+                        <header class="product-card__header">
+                            <img src="./assets/img/product.png" alt="product" class="product-card__img">
+                            <div class="product-card__price">
+                                <h4 class="product-card__price-title product-card__price-title--old">8300 ₽</h4>
+                                <h4 class="product-card__price-title">2490 ₽</h4>
                             </div>
-                            <button class="button button--primary" title="заказать">заказать</button>
-                            <button class="button button--secondary" title="подробнее">Подробнее</button>
-                            <button class="card__info-btn" title="важная информация">Важная информация</button>
+                            <button class="button button--primary">заказать</button>
+                            <button class="button button--secondary">Подробнее</button>
+                            <button class="product-card__info-btn">Важная информация</button>
                         </header>
-                        <div class="card__main">
-                            <h3 class="card__title">
+                        <div class="product-card__main">
+                            <h3 class="product-card__title">
                                 <b>секреты продуктивной работы</b>
                                 <br>за компьютером
                             </h3>
-                            <p class="card__text">
+                            <p class="product-card__text">
                                 К сожалению, когда человек покупает компьютер 
                                 или ноутбук, то с ним нет никакого обучающего 
                                 пособия о том, как использовать покупку 
@@ -80,107 +85,469 @@
                                 на самом примитивном уровне.
                             </p>
                         </div>
-                        <footer class="card__footer">
-                            <p class="card__footer-text">Порекомендуй другу и получи дополнитульную скидку!</p>
+                        <footer class="product-card__footer">
+                            <p class="product-card__footer-text">Порекомендуй другу и получи дополнитульную скидку!</p>
                             <ul class="share">
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="вконтакте">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#vk"></use>
+                                            <use xlink:href="#vk"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="instagram">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#inst"></use>
+                                            <use xlink:href="#inst"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="facebook">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#fb"></use>
+                                            <use xlink:href="#fb"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="одноклассники">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#ok"></use>
+                                            <use xlink:href="#ok"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="youtube">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#youtube"></use>
+                                            <use xlink:href="#youtube"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="linkedin">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#linkedin"></use>
+                                            <use xlink:href="#linkedin"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="pencil">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#pencil"></use>
+                                            <use xlink:href="#pencil"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="мой мир">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#smile"></use>
+                                            <use xlink:href="#smile"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank"  title="яндекс">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#yandex"></use>
+                                            <use xlink:href="#yandex"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="share__item">
-                                    <a href="https://vk.com/id119954262" class="share__link" target="_blank">
+                                    <a href="#" class="share__link" target="_blank" title="google+">
                                         <svg class="share__icon">
-                                            <use xlink:href="assets/img/sprite.svg#google"></use>
+                                            <use xlink:href="#google"></use>
                                         </svg>
                                     </a>
                                 </li>
                             </ul>
                         </footer>
-                        <div class="card__popup">
-                            <button class="cross-btn" title="закрыть">
-                                <p class="card__text">
-                                    Покупая данный продукт, учтите следующие его 
-                                    особенности:
-                                </p>
-                                <ul class="card__list">
-                                    <li class="card__item">
-                                        Курс может поставляться на флеш-накопителе, 
-                                        в цифровом варианте или же как просмотр в 
-                                        онлайн-режиме. Курс без проблем запустится 
-                                        как на Windows, так и на OS X (Mac OS).
-                                    </li>
-                                    <li class="card__item">
-                                        Вы защищены 100% гарантией возврата денег 
-                                        на тот случай, если что-то пойдет не так. 
-                                        Гарантия действует 90 дней.
-                                    </li>
-                                </ul>
-                            </button>
+                        <div class="product-card__popup">
+                            <button class="cross-btn" title="закрыть"></button>
+                            <p class="product-card__text">
+                                Покупая данный продукт, учтите следующие его 
+                                особенности:
+                            </p>
+                            <ul class="product-card__list">
+                                <li class="product-card__list-item">
+                                    Курс может поставляться на флеш-накопителе, 
+                                    в цифровом варианте или же как просмотр в 
+                                    онлайн-режиме. Курс без проблем запустится 
+                                    как на Windows, так и на OS X (Mac OS).
+                                </li>
+                                <li class="product-card__list-item">
+                                    Вы защищены 100% гарантией возврата денег 
+                                    на тот случай, если что-то пойдет не так. 
+                                    Гарантия действует 90 дней.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="product-card">
+                        <header class="product-card__header">
+                            <img src="./assets/img/product.png" alt="product" class="product-card__img">
+                            <div class="product-card__price">
+                                <h4 class="product-card__price-title product-card__price-title--old">8300 ₽</h4>
+                                <h4 class="product-card__price-title">2490 ₽</h4>
+                            </div>
+                            <button class="button button--primary">заказать</button>
+                            <button class="button button--secondary">Подробнее</button>
+                            <button class="product-card__info-btn">Важная информация</button>
+                        </header>
+                        <div class="product-card__main">
+                            <h3 class="product-card__title">
+                                <b>секреты продуктивной работы</b>
+                                <br>за компьютером
+                            </h3>
+                            <p class="product-card__text">
+                                К сожалению, когда человек покупает компьютер 
+                                или ноутбук, то с ним нет никакого обучающего 
+                                пособия о том, как использовать покупку 
+                                максимально эффективно. В итоге большинство 
+                                пользователей используют свой компьютер 
+                                на самом примитивном уровне.
+                            </p>
+                        </div>
+                        <footer class="product-card__footer">
+                            <p class="product-card__footer-text">Порекомендуй другу и получи дополнитульную скидку!</p>
+                            <ul class="share">
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="вконтакте">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="instagram">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#inst"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="facebook">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="одноклассники">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#ok"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="youtube">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="linkedin">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="pencil">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#pencil"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="мой мир">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#smile"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank"  title="яндекс">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#yandex"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="google+">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </footer>
+                        <div class="product-card__popup">
+                            <button class="cross-btn" title="закрыть"></button>
+                            <p class="product-card__text">
+                                Покупая данный продукт, учтите следующие его 
+                                особенности:
+                            </p>
+                            <ul class="product-card__list">
+                                <li class="product-card__list-item">
+                                    Курс может поставляться на флеш-накопителе, 
+                                    в цифровом варианте или же как просмотр в 
+                                    онлайн-режиме. Курс без проблем запустится 
+                                    как на Windows, так и на OS X (Mac OS).
+                                </li>
+                                <li class="product-card__list-item">
+                                    Вы защищены 100% гарантией возврата денег 
+                                    на тот случай, если что-то пойдет не так. 
+                                    Гарантия действует 90 дней.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="product-card">
+                        <header class="product-card__header">
+                            <img src="./assets/img/product.png" alt="product" class="product-card__img">
+                            <div class="product-card__price">
+                                <h4 class="product-card__price-title product-card__price-title--old">8300 ₽</h4>
+                                <h4 class="product-card__price-title">2490 ₽</h4>
+                            </div>
+                            <button class="button button--primary">заказать</button>
+                            <button class="button button--secondary">Подробнее</button>
+                            <button class="product-card__info-btn">Важная информация</button>
+                        </header>
+                        <div class="product-card__main">
+                            <h3 class="product-card__title">
+                                <b>секреты продуктивной работы</b>
+                                <br>за компьютером
+                            </h3>
+                            <p class="product-card__text">
+                                К сожалению, когда человек покупает компьютер 
+                                или ноутбук, то с ним нет никакого обучающего 
+                                пособия о том, как использовать покупку 
+                                максимально эффективно. В итоге большинство 
+                                пользователей используют свой компьютер 
+                                на самом примитивном уровне.
+                            </p>
+                        </div>
+                        <footer class="product-card__footer">
+                            <p class="product-card__footer-text">Порекомендуй другу и получи дополнитульную скидку!</p>
+                            <ul class="share">
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="вконтакте">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="instagram">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#inst"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="facebook">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="одноклассники">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#ok"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="youtube">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="linkedin">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="pencil">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#pencil"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="мой мир">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#smile"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank"  title="яндекс">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#yandex"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="google+">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </footer>
+                        <div class="product-card__popup">
+                            <button class="cross-btn" title="закрыть"></button>
+                            <p class="product-card__text">
+                                Покупая данный продукт, учтите следующие его 
+                                особенности:
+                            </p>
+                            <ul class="product-card__list">
+                                <li class="product-card__list-item">
+                                    Курс может поставляться на флеш-накопителе, 
+                                    в цифровом варианте или же как просмотр в 
+                                    онлайн-режиме. Курс без проблем запустится 
+                                    как на Windows, так и на OS X (Mac OS).
+                                </li>
+                                <li class="product-card__list-item">
+                                    Вы защищены 100% гарантией возврата денег 
+                                    на тот случай, если что-то пойдет не так. 
+                                    Гарантия действует 90 дней.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="product-card">
+                        <header class="product-card__header">
+                            <img src="./assets/img/product.png" alt="product" class="product-card__img">
+                            <div class="product-card__price">
+                                <h4 class="product-card__price-title product-card__price-title--old">8300 ₽</h4>
+                                <h4 class="product-card__price-title">2490 ₽</h4>
+                            </div>
+                            <button class="button button--primary">заказать</button>
+                            <button class="button button--secondary">Подробнее</button>
+                            <button class="product-card__info-btn">Важная информация</button>
+                        </header>
+                        <div class="product-card__main">
+                            <h3 class="product-card__title">
+                                <b>секреты продуктивной работы</b>
+                                <br>за компьютером
+                            </h3>
+                            <p class="product-card__text">
+                                К сожалению, когда человек покупает компьютер 
+                                или ноутбук, то с ним нет никакого обучающего 
+                                пособия о том, как использовать покупку 
+                                максимально эффективно. В итоге большинство 
+                                пользователей используют свой компьютер 
+                                на самом примитивном уровне.
+                            </p>
+                        </div>
+                        <footer class="product-card__footer">
+                            <p class="product-card__footer-text">Порекомендуй другу и получи дополнитульную скидку!</p>
+                            <ul class="share">
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="вконтакте">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="instagram">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#inst"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="facebook">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="одноклассники">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#ok"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="youtube">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="linkedin">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="pencil">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#pencil"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="мой мир">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#smile"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank"  title="яндекс">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#yandex"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="share__item">
+                                    <a href="#" class="share__link" target="_blank" title="google+">
+                                        <svg class="share__icon">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </footer>
+                        <div class="product-card__popup">
+                            <button class="cross-btn" title="закрыть"></button>
+                            <p class="product-card__text">
+                                Покупая данный продукт, учтите следующие его 
+                                особенности:
+                            </p>
+                            <ul class="product-card__list">
+                                <li class="product-card__list-item">
+                                    Курс может поставляться на флеш-накопителе, 
+                                    в цифровом варианте или же как просмотр в 
+                                    онлайн-режиме. Курс без проблем запустится 
+                                    как на Windows, так и на OS X (Mac OS).
+                                </li>
+                                <li class="product-card__list-item">
+                                    Вы защищены 100% гарантией возврата денег 
+                                    на тот случай, если что-то пойдет не так. 
+                                    Гарантия действует 90 дней.
+                                </li>
+                            </ul>
                         </div>
                     </section>
                 </div>
                 <form action="" class="form-subscribe">
-                    <input type="text" class="input" placeholder="Ваше имя">
-                    <input type="email" name="email" class="input" placeholder="Ваш e-mail">
+                    <input type="text" class="form-subscribe__input" placeholder="Ваше имя">
+                    <input type="email" name="email" class="form-subscribe__input" placeholder="Ваш e-mail">
                     <button type="submit" class="form-subscribe__btn">Хочу получать новости о скидках</button>
                 </form>
             </div>
@@ -204,7 +571,8 @@
         </footer>
     </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <div id="sprite-container" style="display: none;"></div>
+    <script src="js/sprite.cache.js"></script>
     <script src="js/main.js"></script>
 </body>
 

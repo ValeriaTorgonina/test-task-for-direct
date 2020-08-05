@@ -1,0 +1,107 @@
+.product-card {
+    &__header {
+        padding: 25px 20px;
+        padding-bottom: 0;
+        position: relative;
+        margin-bottom: 10px;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        background-color: #e9ecf2;
+        z-index: 1;
+    }
+    
+    &__img {
+        margin-left: -25px;
+        margin-right: 25px;
+        float: left;
+    }
+    
+    &__price {
+        display: inline-block;
+        background: white;
+        padding: 5px 25px;
+        width: 50%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    
+    &__price-title {
+        font-family: Arial, sans-serif;
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: #d8481c;
+        margin: 0;
+        line-height: 2.6rem;
+    
+        &--old {
+            color: #575757;
+            font-size: 1.9rem;
+            line-height: 2rem;
+            text-decoration: line-through;
+        }
+    }
+    
+    .button {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    
+    &__info-btn {
+        font-family: Arial, sans-serif;
+        color: #b83b11;
+        border-bottom: 1px dashed;
+        margin-left: auto;
+        transition: 0.3s;
+    
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    
+        &:active {
+            color: black;
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__header {
+            height: 200px;
+        }
+
+        &__img {
+            height: 100%;
+        }
+
+        &__price {
+            padding: 5px 15px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) { 
+        &__img {
+            height: 150px;
+            margin-right: 15px;
+            float: none;
+            order: 0;
+        }
+
+        &__price,
+        .button {
+            width: 45%;
+        }
+
+        &__price-title {
+            font-size: 20px;
+            line-height: 20px;
+            &--old {
+                font-size: 16px;
+            }
+        }
+    }
+}

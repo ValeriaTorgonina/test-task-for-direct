@@ -1,3 +1,7 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Akrobat", Arial, sans-serif;
     font-weight: 400;
@@ -14,6 +18,7 @@ a {
 }
 
 input, textarea, button {
+    font-family: "Akrobat", Arial, sans-serif;
     background: none;
     border: none;
     resize: none;
@@ -24,14 +29,29 @@ input, textarea, button {
     }
 }
 
+button {
+    cursor: pointer;
+}
+
 img {
-    object-fit: cover;
+    object-fit: contain;
 }
 
 h1, h2, h3, h4, p {
     margin: 0;
 }
 
+svg {
+    width: 25px;
+    height: 25px;
+}
+
 .wrapper {
     overflow: hidden;
+}
+
+@include media-breakpoint-down(md) {
+    html {
+        font-size: 11px;
+    }
 }

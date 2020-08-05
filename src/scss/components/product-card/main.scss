@@ -1,0 +1,31 @@
+.product-card {
+    &__main {
+        padding: 0 20px;
+    }
+    
+    &__title {
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        line-height: 2.5rem;
+    
+        b {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+    
+    &__text {
+        color: $font-main;
+        margin: 18px 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__title {
+            font-size: 1.6rem;
+        }
+    }
+}

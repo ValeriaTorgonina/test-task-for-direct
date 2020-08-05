@@ -1,3 +1,22 @@
 @import "../../node_modules/normalize-scss/sass/normalize/_import-now";
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "./common.scss";
+@import "./fonts.scss";
+
+@import "./components/main-header.scss";
+@import "./components/main-footer.scss";
+@import "./components/main.scss";
+@import "./components/socials.scss";
+@import "./components/banner.scss";
+@import "./components/promotion.scss";
+@import "./components/form-subscribe.scss";
+@import "./components/container.scss";
+@import "./components/buttons.scss";
+@import "./components/share.scss";
+
+@import "./components/product-card/card.scss";
+@import "./components/product-card/header.scss";
+@import "./components/product-card/main.scss";
+@import "./components/product-card/footer.scss";
+@import "./components/product-card/popup.scss";

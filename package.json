@@ -30,6 +30,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "bootstrap": "^4.5.1",
     "normalize-scss": "^7.0.1"
   }
 }

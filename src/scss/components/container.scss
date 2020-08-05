@@ -1,0 +1,18 @@
+@include media-breakpoint-up(lg) { 
+    .container {
+        @include make-container();
+    }
+}
+
+.container {
+    @include make-container();
+    max-width: 960px;
+
+    @include media-breakpoint-down(md) { 
+        max-width: 760px;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        max-width: 520px;
+    }
+}

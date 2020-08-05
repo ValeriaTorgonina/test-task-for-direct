@@ -1,0 +1,43 @@
+.main-footer {
+    padding: 70px 0 55px;
+    background: #a4a4a5;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        color: white;
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+
+    &__link {
+        color: white;
+        font-size: 16px;
+        border-bottom: 1px solid;
+        transition: 0.3s;
+
+        &:hover {
+            color: white;
+            border-bottom-color: transparent;
+            text-decoration: none;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    @include media-breakpoint-down(xs) { 
+        padding: 50px 0 35px;
+        
+        &__text,
+        &__link {
+            font-size: 12px;
+        }
+    }
+}

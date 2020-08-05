@@ -1,0 +1,119 @@
+.form-subscribe {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #80c9b0;
+    border: 3px dotted #56907c;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 80px;
+        height: 50px;
+        top: 50%;
+        background: url('../../assets/img/form-arrow.png') 50% 50% no-repeat;
+        background-size: contain;
+        transform: translate(0, -50%);
+    }
+
+    &:before {
+        left: -120px;
+    }
+
+    &:after {
+        right: -120px;
+        transform: translate(0, -50%)  scale(-1, 1);
+    }
+
+    &__btn {
+        width: 35%;
+        background: #de0d08;
+        padding: 10px 20px;
+        color: white;
+        font-size: 20px;
+        transition: 0.3s;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    
+        &:active {
+            transform: scale(0.95);
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__input {
+        width: 31%;
+        padding: 10px 20px;
+        border-radius: 0;
+        background: white;
+        text-align: center;
+        border: 1px solid #56907c;
+        font-size: 20px;
+    }
+
+    @include media-breakpoint-down(lg) { 
+        margin-top: 60px;
+
+        &:before {
+            top: -55px;
+            left: 15%;
+            transform: translate(0, -50%) rotate(90deg);
+        }
+    
+        &:after {
+            top: -55px;
+            right: 15%;
+            transform: translate(0, -50%) rotate(-90deg) scale(-1, 1);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__input {
+            width: 49%;
+            margin-bottom: 20px;
+        }
+
+        &__btn {
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+
+    @include media-breakpoint-down(sm) { 
+        margin-top: 0;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        &__input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        &__input,
+        &__btn { 
+            font-size: 14px;
+        }
+
+        &__input {
+            margin-bottom: 10px;
+        }
+    }
+}

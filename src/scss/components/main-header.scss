@@ -1,0 +1,49 @@
+.main-header {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    background: $main;
+    z-index: 5;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-img {
+        width: 45px;
+        height: 50px;
+        margin-right: 15px;
+    }
+
+    &__logo-text {
+        font-size: 26px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    @include media-breakpoint-down(sm) { 
+        &__logo-img {
+            width: 35px;
+            height: 40px;
+        }
+    }
+
+    @include media-breakpoint-down(xs) { 
+        &__logo-img {
+            margin-right: 5px;
+        }
+
+        &__logo-text {
+            font-size: 20px;
+        }
+    }
+}

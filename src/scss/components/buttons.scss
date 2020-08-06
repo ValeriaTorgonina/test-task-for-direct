@@ -65,3 +65,16 @@
         outline: none;
     }
 }
+
+.swiper-pagination {
+    z-index: 1 !important;
+
+    &-bullet {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    &-bullet-active {
+        background: #de0d08 !important;
+    }
+}

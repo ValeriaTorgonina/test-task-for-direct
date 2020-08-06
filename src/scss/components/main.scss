@@ -3,24 +3,13 @@
     padding-bottom: 60px;
     background: url('../../assets/img/main-bg.jpg') repeat 0% 50%;
 
-    &__cards-wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .product-card {
-            margin-bottom: 60px;
-        }
-    }
-
     @include media-breakpoint-down(sm) { 
-        &__cards-wrapper { 
-            display: block;
-
-            .product-card {
-                margin: 0 auto;
-                margin-bottom: 40px;
-            }
+        &__cards-wrapper {
+            position: relative;
+            overflow: hidden;
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 7px;
         }
     }
 }

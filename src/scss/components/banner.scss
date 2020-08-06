@@ -2,6 +2,7 @@
     position: relative;
     margin-bottom: 65px;
     box-shadow: 0 0 10px 0 gray;
+    pointer-events: auto !important;
 
     &:before {
         content: '';
@@ -22,7 +23,8 @@
 
     &__decor {
         position: absolute;
-        top: 50%;
+        top: 50% !important;
+        left: auto !important;
         right: 3%;
         width: 8%;
     }
@@ -31,11 +33,57 @@
         width: 100%;
     }
 
+    &__decor-snowflake {
+        width: 4%;
+        height: 19%;
+        right: 0;
+        top: 2% !important;
+        left: auto !important;
+        background: url('../../assets/img/snowflake.png') 50% 50% no-repeat;
+        background-size: contain;
+
+        &--2 {
+            right: -1%;
+            top: 54% !important;
+        }
+
+        &--3 {
+            right: 9%;
+            top: 46% !important;        
+        }
+    }
+
+    &__decor-title {
+        width: 37%;
+        height: 74%;
+        top: 3% !important;
+        left: 36% !important;
+        background: url('../../assets/img/banner-text.png') 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+    &__decor-snowman {
+        width: 16%;
+        height: 71%;
+        bottom: 0;
+        right: 13%;
+        top: auto !important;
+        left: auto !important;
+        background: url('../../assets/img/snowman.png') 50% 50% no-repeat;
+        background-size: contain;
+    }
+
     @include media-breakpoint-down(xs) {
         margin-bottom: 45px;
 
         &__decor {
-            display: none;
+            display: none !important;
+            
+            &-snowman,
+            &-title,
+            &-snowflake {
+                display: none !important;
+            }
         }
     }
 }

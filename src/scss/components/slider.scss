@@ -1,0 +1,27 @@
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .product-card {
+        margin-bottom: 60px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+
+}
+
+@include media-breakpoint-down(sm) { 
+    .swiper-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        display: block;
+        bottom: 35px !important;
+    }
+}
+

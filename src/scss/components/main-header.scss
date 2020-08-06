@@ -6,6 +6,11 @@
     left: 0;
     background: $main;
     z-index: 5;
+    transition: 0.3s;
+
+    &.out {
+        transform: translate(0, -100%);
+    }
 
     .container {
         display: flex;

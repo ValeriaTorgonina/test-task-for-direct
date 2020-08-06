@@ -27,6 +27,11 @@
         left: auto !important;
         right: 3%;
         width: 8%;
+        transition: 0.3s;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
     }
 
     &__decor-img {

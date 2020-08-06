@@ -6,12 +6,10 @@
     .product-card {
         margin-bottom: 60px;
     }
+}
 
-    .swiper-pagination {
-        display: none;
-    }
-
-
+.swiper-pagination {
+    display: none;
 }
 
 @include media-breakpoint-down(sm) { 
@@ -19,8 +17,11 @@
         flex-wrap: nowrap;
     }
 
-    .swiper-container-horizontal>.swiper-pagination-bullets {
+    .swiper-pagination {
         display: block;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
         bottom: 35px !important;
     }
 }
